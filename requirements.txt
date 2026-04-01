@@ -1,13 +1,9 @@
 numpy
 opencv-python-headless
-tensorflow
-pythorch
 pandas
-os
 matplotlib
 Pillow
 scikit-learn
 flake8
 mypy
 pytest
-types-tensorflow
