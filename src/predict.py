@@ -16,7 +16,7 @@ from tensorflow.keras.preprocessing import image
 # CONFIG
 # -----------------------------
 MODEL_PATH = "model.h5"
-TEST_DIR = "/Users/pratik/Documents/Finalized Projects/Distracted_Driver_detection/dataset/imgs/test"
+TEST_DIR = "/Users/pratik/Documents/Projects/DriverBehaviourDetection/state-farm-distracted-driver-detection/imgs/test"
 IMG_SIZE = (224, 224)
 BATCH_SIZE = 32
 # Load model
