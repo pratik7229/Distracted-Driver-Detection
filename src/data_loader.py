@@ -29,13 +29,23 @@ def preprocessingDataset(train_ds, val_ds):
     normalization_layer = tf.keras.layers.Rescaling(1./255)
     AUTOTUNE = tf.data.AUTOTUNE
 
+    def preprocess_train(x, y):
+        x = tf.image.resize_with_pad(x, IMG_SIZE[0], IMG_SIZE[1])
+        x = normalization_layer(x)
+        return x, y
+    
+    def preprocess_val(x, y):
+        x = tf.image.resize_with_pad(x, IMG_SIZE[0], IMG_SIZE[1])
+        x = normalization_layer(x)
+        return x, y
+    
     train_ds = train_ds.map(
-        lambda x, y: (normalization_layer(x), y),
+        preprocess_train,
         num_parallel_calls=AUTOTUNE
     )
 
     val_ds = val_ds.map(
-        lambda x, y: (normalization_layer(x), y),
+        preprocess_val,
         num_parallel_calls=AUTOTUNE
     )
 
