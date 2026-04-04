@@ -1,3 +1,6 @@
-src/model.h5
+model_training/model.h5
+model_training/model.onnx
+model_deployment/a.out
+model_deployment/app
 __pycache__/
 *.pyc
