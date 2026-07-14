@@ -4,3 +4,4 @@ model_deployment/a.out
 model_deployment/app
 __pycache__/
 *.pyc
+/build
